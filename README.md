@@ -1,7 +1,7 @@
 mare-runner
 ===========
 
-This project build a standalone [mare][https://github.com/muzuiget/mare] distribution, it can run without install any dependencies.
+This project build a standalone [mare](https://github.com/muzuiget/mare) distribution, it can run without install any dependencies.
 
 Intro
 -----
@@ -18,6 +18,11 @@ It bundle all the runtime dependencies:
 * pack NodeJS executable binary file
 * pack all NodeJS modules
 * a simple NodeJS server
+
+[remotedebug]: https://github.com/muzuiget/mare-remotedebug
+[lsocket]: https://github.com/cloudwu/lsocket
+[devtools]: https://github.com/muzuiget/mare-devtools-frontend
+[msgpack]: https://github.com/fperrad/lua-MessagePack
 
 Support
 -------
