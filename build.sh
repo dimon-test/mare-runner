@@ -169,12 +169,13 @@ mkdir -p $BUILD_DIR
 
     cd lsocket
     git co .&& git clean -dfx .
-    gcc -O2 -shared -fPIC -o lsocket.so lsocket.c
+    gcc -O2 -shared -fPIC -I../lua/src -o lsocket.so lsocket.c
     cd ..
 
     cd remotedebug
     git co .&& git clean -dfx .
     gcc -O2 -shared -fPIC -D_GNU_SOURCE \
+        -I../lua/src \
         -o remotedebug.so debugvar.h remotedebug.c
     cd ..
 )
