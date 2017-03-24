@@ -11,7 +11,6 @@ It bundle all the runtime dependencies:
 * compile Lua executable binary file
 * compile [remotedebug.so][remotedebug]
 * compile [lsocket.so][lsocket]
-* compress [Chrome DevTools Frontend][devtools]
 * pack [MessagePack.lua][msgpack]
 * pack mare lua library
 * pack mare lua example files
@@ -21,7 +20,6 @@ It bundle all the runtime dependencies:
 
 [remotedebug]: https://github.com/muzuiget/mare-remotedebug
 [lsocket]: https://github.com/cloudwu/lsocket
-[devtools]: https://github.com/muzuiget/mare-devtools-frontend
 [msgpack]: https://github.com/fperrad/lua-MessagePack
 
 Support

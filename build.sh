@@ -18,8 +18,6 @@ MARE_URL=https://github.com/muzuiget/mare.git
 MARE_BRANCH=master
 REMOTEDEBUG_URL=https://github.com/muzuiget/mare-remotedebug.git
 REMOTEDEBUG_BRANCH=master
-DEVTOOLS_URL=https://github.com/muzuiget/mare-devtools-frontend.git
-DEVTOOLS_BRANCH=master
 
 BUILD_DIR=build
 DIST_DIR=dist
@@ -116,17 +114,6 @@ mkdir -p $BUILD_DIR
         git fetch && git reset --hard origin/$REMOTEDEBUG_BRANCH
         cd ..
     fi
-
-    # devtools
-    if [ ! -d devtools ]; then
-        git clone --depth 1 --single-branch \
-            --branch $DEVTOOLS_BRANCH \
-            $DEVTOOLS_URL devtools
-    else
-        cd devtools
-        git fetch && git reset --hard origin/$DEVTOOLS_BRANCH
-        cd ..
-    fi
 )
 
 # prepare node_modules
@@ -151,11 +138,6 @@ mkdir -p $BUILD_DIR
     npm install --loglevel=info
     npm run build
     cd ../..
-
-    cd devtools
-    git co .
-    ./build.sh
-    cd ..
 )
 
 # build linux-x64
@@ -184,7 +166,6 @@ cp -r $BUILD_DIR/mare/server/dist $DIST_DIR/linux-x64/server
 cp -r $BUILD_DIR/mare/web/dist $DIST_DIR/linux-x64/web
 cp -r $BUILD_DIR/mare/lua-example $DIST_DIR/linux-x64/example
 cp -r $BUILD_DIR/mare/lua-libs/mare $DIST_DIR/linux-x64/example/mare
-cp -r $BUILD_DIR/devtools/dist/front_end $DIST_DIR/linux-x64/web/webroot/devtools
 cp $BUILD_DIR/lua/src/lua $DIST_DIR/linux-x64/example
 cp $BUILD_DIR/lsocket/lsocket.so $DIST_DIR/linux-x64/example
 cp $BUILD_DIR/remotedebug/remotedebug.so $DIST_DIR/linux-x64/example
@@ -228,7 +209,6 @@ cp -r $BUILD_DIR/mare/server/dist $DIST_DIR/win-x64/server
 cp -r $BUILD_DIR/mare/web/dist $DIST_DIR/win-x64/web
 cp -r $BUILD_DIR/mare/lua-example $DIST_DIR/win-x64/example
 cp -r $BUILD_DIR/mare/lua-libs/mare $DIST_DIR/win-x64/example/mare
-cp -r $BUILD_DIR/devtools/dist/front_end $DIST_DIR/win-x64/web/webroot/devtools
 cp $BUILD_DIR/lua/src/{lua53.dll,lua.exe} $DIST_DIR/win-x64/example
 cp $BUILD_DIR/lsocket/lsocket.dll $DIST_DIR/win-x64/example
 cp $BUILD_DIR/remotedebug/remotedebug.dll $DIST_DIR/win-x64/example
