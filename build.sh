@@ -7,7 +7,7 @@ NODEJS_PKG_URL_PREFIX=https://nodejs.org/dist/v$NODEJS_VER
 NODEJS_DIR_LINUX_x64=node-v$NODEJS_VER-linux-x64
 NODEJS_DIR_WIN_x64=node-v$NODEJS_VER-win-x64
 
-LUA_URL=https://github.com/muzuiget/mirror-lua.git
+LUA_URL=https://github.com/muzuiget/lua-src.git
 LUA_TAG=v5.3.4
 LSOCKET_URL=https://github.com/cloudwu/lsocket.git
 LSOCKET_BRANCH=master
