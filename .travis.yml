@@ -3,5 +3,11 @@ language: c
 notifications:
     email: false
 
+matrix:
+    include:
+        - os: linux
+          dist: trusty
+          sudo: false
+
 script:
-    - echo hello world
+    - ./build.sh
