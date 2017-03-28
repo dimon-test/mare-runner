@@ -3,50 +3,35 @@ mare-runner
 
 [![Build Status](https://travis-ci.org/muzuiget/mare-runner.svg?branch=master)](https://travis-ci.org/muzuiget/mare-runner)
 
-This project build a standalone [mare](https://github.com/muzuiget/mare) distribution, it can run without install any dependencies.
+This project build a standalone [mare](https://github.com/muzuiget/mare) distribution, it can run out-of-box, without install any dependencies.
 
 Intro
 -----
 
 It bundle all the runtime dependencies:
 
-* compile Lua executable binary file
-* compile [remotedebug.so][remotedebug]
-* compile [lsocket.so][lsocket]
-* pack [MessagePack.lua][msgpack]
-* pack mare lua library
-* pack mare lua example files
+* pack Lua binary files from [lua-bin](https://github.com/muzuiget/lua-bin)
 * pack NodeJS executable binary file
+* pack mare lua library and example files
 * pack all NodeJS modules
-* a simple NodeJS server
+* provide  a simple standalone server
 
-[remotedebug]: https://github.com/muzuiget/mare-remotedebug
-[lsocket]: https://github.com/cloudwu/lsocket
-[msgpack]: https://github.com/fperrad/lua-MessagePack
+Download
+--------
 
-Support
--------
+Checkout [Github Release](https://github.com/muzuiget/lua-bin/releases) page, which are built by [Travis CI](https://travis-ci.org/), Download the zip for your OS.
 
-* Linux x64
-* Windows x64, cross compile with mingw.
+Usage
+-----
 
-Require
--------
+Unzip the archive file, run `./node index.js`, then a server will startup.
 
-below programs should in your `$PATH`
-
-* gcc
-* x86_64-w64-mingw32-gcc
-* zip
-* git
-* tar
-* wget
-* sed
+Open another terminal, go into `exmaple/` folder, run `./lua -i test.lua` to play around.
 
 Build
 -----
 
-run `./build.sh`, if no errors occur, archive files in ./dist/archives folder
+run `./build.sh`, if no errors occur, archive files in `./dist/` folder
 
 FAQ
 ----
