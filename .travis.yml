@@ -11,3 +11,14 @@ matrix:
 
 script:
     - ./build.sh
+
+deploy:
+    provider: releases
+    api_key:
+        secure: KolfAmhPN2CV/BUuxyUfQQCAUADlOjTK0nTr57vq18TMs3U6+QuBcWFa1hMU12YeYn/3aLZ5adlLm9mx1RXIcfke86KzBgblTPnGoySkHsXaOhx+8ZmdtnqI+b4dTedtM+hCB6SX6X4uDelf/EPO8kt42mgzgYSfBD3PmjpqMPt5sijUBN1J8ITKPg0DYX+yi0TQG3rp9abWlrH/vlRawAxCkoeChGJMKnt1PsxUZPPIh9LT1MWYXsS6jCdrsAcyaJY+kz8cvDkj30sGzhNQ37RsTZUCNZgslw56LxjbTq5SThb4rR8stUN6rHbycJbAlx4rvUvKxIx2LbiSpJZWKCRC482hjRZsiBwePcc8wdMMpt1QN0dHLr3llCnFJs5LoRzMDMAy2OhA47wSyjWyWA33a+XTbGTUs+XncaRcPcHPSUaU9UYEpNEmiGtDl5OtUjJmNrsqf2tIBtUVlXodZ+r12pHnE2+tXeIfPJ64M3PLK42WFVa8Nhnp/AE+LoCSt8fed0foWgN1krQuNiumcgIWeFghgGWEL34DcZ1KKReTIqz2iS9ztK6MJsjthuK/9n/M2uzEGKVU86XVZW59Ku+t1HFpnDZtZZPvtr7jUUj1mfuH1k8n57KJbnPeDuttq0lo6QCfXB4iRIdpSv4VlffnOopNSSTaDPz0Rtm169c=
+    file_glob: true
+    file: dist/*.zip
+    overwrite: true
+    skip_cleanup: true
+    on:
+        tags: true
