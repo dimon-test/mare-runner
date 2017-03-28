@@ -19,7 +19,7 @@ It bundle all the runtime dependencies:
 Download
 --------
 
-Checkout [Github Release](https://github.com/muzuiget/lua-bin/releases) page, which are built by [Travis CI](https://travis-ci.org/), Download the zip for your OS.
+Checkout [Github Release](https://github.com/muzuiget/mare-runner/releases) page, which are built by [Travis CI](https://travis-ci.org/), Download the zip for your OS.
 
 Usage
 -----
