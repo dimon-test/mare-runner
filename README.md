@@ -1,6 +1,8 @@
 mare-runner
 ===========
 
+[![Build Status](https://travis-ci.org/muzuiget/mare-runner.svg?branch=master)](https://travis-ci.org/muzuiget/mare-runner)
+
 This project build a standalone [mare](https://github.com/muzuiget/mare) distribution, it can run without install any dependencies.
 
 Intro
