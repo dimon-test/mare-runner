@@ -6,7 +6,7 @@ download_dir=$MARE_RUNNER_DOWNLOAD_DIR
 pwd_dir=$PWD
 
 function download_node_bin() {
-    ver=7.8.0
+    ver=7.10.0
     tpl=https://nodejs.org/dist/v$ver
     mkdir -p node-bin-dirs
 
@@ -100,7 +100,7 @@ function download_lua_bin() {
 
 function download_mare_src() {
     url=https://github.com/muzuiget/mare.git
-    tag=v0.2.1
+    tag=v0.2.2
     if [ -d mare ]; then
         cd mare
         git checkout . && git clean -df .
