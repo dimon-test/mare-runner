@@ -57,7 +57,7 @@ function download_node_bin() {
 }
 
 function download_lua_bin() {
-    tag=v0.1.2
+    tag=v0.1.3
     tpl=https://github.com/muzuiget/lua-bin/releases/download/${tag}
     mkdir -p lua-bin-dirs
 
@@ -100,7 +100,7 @@ function download_lua_bin() {
 
 function download_mare_src() {
     url=https://github.com/muzuiget/mare.git
-    tag=v0.2.2
+    tag=v0.2.3
     if [ -d mare ]; then
         cd mare
         git checkout . && git clean -df .
