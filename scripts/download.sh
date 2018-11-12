@@ -100,7 +100,7 @@ function download_lua_bin() {
 
 function download_mare_src() {
     url=https://github.com/muzuiget/mare.git
-    tag=v0.2.3
+    tag=v0.2.4
     if [ -d mare ]; then
         cd mare
         git checkout . && git clean -df .
